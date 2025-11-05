@@ -11,4 +11,38 @@ callback
 clousures
 modules
 typescript
+    interface
+        https://www.typescriptlang.org/docs/handbook/2/objects.html
+    generics
+                class  Repository<T>{
+            add(entity:T){
+
+            }
+        }
+
+        class Customer{
+            
+        }
+
+        class User{
+            id:string=''
+        }
+
+        let customer =new Customer()
+        let user = new User()
+        customer = user
+        user = customer
+
+        class UserRespository extends Repository<User>{
+
+        }
+
+        const userRespository = new UserRespository()
+        userRespository.add(new Customer())
+        userRespository.add(new User())
+        https://claude.ai/share/1029e0b9-bcab-48f8-8e13-4da129bae7ac
+    mixins
+        https://www.typescriptlang.org/docs/handbook/mixins.html
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+    decorators
 node

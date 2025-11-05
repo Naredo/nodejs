@@ -1,6 +1,8 @@
 import {suma,resta,multiplicacion as mult,division} from './operaciones.js'
 import * as op from  './operaciones.js'
 import './menu.js'
+import json from "./foo.json" with { type: "json" };
+console.log(json)
 
 console.log(suma(5,3)) //8
 console.log(resta(5,3)) //2
