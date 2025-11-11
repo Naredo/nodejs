@@ -1,0 +1,44 @@
+1. http sin estado
+    user Admin
+    pwd 1234 bcrypt
+    https
+1.1 Cookie
+    SET-COOKIE
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie
+
+    HttpOnly(xss) document.cookie no aparezca esa cookie(10)
+    secure->https
+
+    cookie:
+        https://developer.mozilla.org/es/docs/Web/HTTP/Reference/Headers/Cookie
+
+    csrf->POST(5)
+        cokie httponly secure(llave) session,csrf
+        input type="hidden" value="sdkfasdfasdffsad"(candado)
+
+1.2 Token(JWT)
+    1. tipo
+    2. claims
+    3. firma con una secrete part1+part2
+        decod decod encriptitada
+        part1.part2.part3
+
+        {
+            token:xxxx.yyyy.zzzz
+            type:Bearer
+        }
+
+        Autorizathion: Bearer xxxx.yyyy.zzzz
+
+        localstorage
+            1. Serializar y deserializar->json.stringify json.parse
+            2. sincrono
+            3. No trabaja con workers
+        indexdb
+            1. Serialización nativa
+            2. asyncrono
+            3. Trabaja con workers
+
+        xss
+        CSP->https://www.w3.org/TR/CSP3/
+        
